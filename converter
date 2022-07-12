@@ -1,0 +1,20 @@
+byte = []
+binary = []
+number1 = input("Enter a number")
+number = int(number1)
+doubler = 1
+while doubler < number:
+    byte.append(doubler)
+    doubler *= 2
+# Reverses the Byte list to be descending [256, 128, 64...]
+byte.reverse()
+
+for i in byte:
+    if number >= i:
+        binary.append(1)
+        number -= i
+    else:
+        binary.append(0)
+
+
+print(binary)
